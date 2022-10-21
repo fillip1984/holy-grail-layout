@@ -11,10 +11,8 @@ const App = () => {
   const [bottomDrawerVisible, setBottomDrawerVisible] = useState(false);
 
   return (
-    <div className="flex h-screen flex-col bg-indigo-500">
-      {/* above bg-indigo-500 class is just to see what areas of the screen are streched 
-          beyond other components and isn't necessary in final product */}
-      <header className="h-[8vh] bg-red-100 p-2">Top</header>
+    <div className="flex h-screen flex-col">
+      <TopNav />
 
       <div className="flex flex-1 overflow-hidden">
         <nav className="w-[15vw] bg-green-100 p-2">Side</nav>
