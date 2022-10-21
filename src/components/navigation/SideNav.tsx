@@ -21,7 +21,7 @@ const SideNav = () => {
   ];
 
   return (
-    <nav className="bg-sky-300">
+    <nav className="bg-sky-300 pt-6">
       <div className="flex flex-col space-y-4 px-2 text-2xl text-white">
         {/* Handles active class of react-router-dom NavLink,
             https://ultimatecourses.com/blog/active-navlink-classes-with-react-router */}

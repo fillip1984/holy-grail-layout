@@ -18,9 +18,8 @@ const App = () => {
       <TopNav />
 
       <div className="flex flex-1 overflow-hidden">
-        <nav className="w-[15vw] bg-green-100 p-2">Side</nav>
-        {/* view height (vh) and view width (vw) are key to forcing flex containers to grow to their full height/width. */}
         <Router>
+          <SideNav />
           <Routes>
             <Route
               path="/home"
