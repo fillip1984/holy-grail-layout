@@ -6,6 +6,7 @@ import TopNav from "./components/navigation/TopNav";
 import SideNav from "./components/navigation/SideNav";
 import { useRef, useState } from "react";
 import Footer from "./components/navigation/Footer";
+import SideDrawer from "./components/navigation/SideDrawer";
 
 const App = () => {
   const [sideDrawerVisible, setSideDrawerVisible] = useState(false);
@@ -35,19 +36,10 @@ const App = () => {
 
       <Footer />
 
-      <div
-        className={`fixed top-0 bottom-0 left-0 z-[999] w-1/3 rounded-r-lg bg-red-300 p-2 transition duration-300 ease-in-out ${
-          sideDrawerVisible ? "" : "-translate-x-full"
-        }`}>
-        <div className="flex items-center justify-between">
-          <h4>Side Drawer</h4>
-          <button
-            className="text-2xl"
-            onClick={() => setSideDrawerVisible(false)}>
-            X
-          </button>
-        </div>
-      </div>
+      <SideDrawer
+        sideDrawerVisible={sideDrawerVisible}
+        setSideDrawerVisible={setSideDrawerVisible}
+      />
 
       <div
         className={`fixed bottom-0 left-0 right-0 z-[999] h-1/3 rounded-t-lg bg-red-300 p-2 transition duration-300 ease-in-out ${
