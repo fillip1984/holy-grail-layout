@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  /* Styles headings consistently. Going from 8xl to 2xl. After that you are near normal text size so no need for h5 and on */
   h1 {
     @apply text-8xl;
   }
