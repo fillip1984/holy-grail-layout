@@ -3,6 +3,7 @@ interface BottomDrawerProps {
   setBottomDrawerVisible: (state: boolean) => void;
 }
 
+// off canvas drawer that slides up from the bottom
 const BottomDrawer = ({
   bottomDrawerVisible,
   setBottomDrawerVisible,

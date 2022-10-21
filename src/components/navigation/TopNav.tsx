@@ -1,3 +1,4 @@
+// static/fixed panel across the top, useful for displaying branding, navigation/tabs, an avatar and log out button
 const TopNav = () => {
   return (
     <header className="flex h-[8vh] items-center justify-between bg-sky-300 p-2">

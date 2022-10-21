@@ -5,6 +5,7 @@ interface BackdropProps {
   setBottomDrawerVisible: (state: boolean) => void;
 }
 
+// blurs/obscures page whenever a drawer is opened
 const Backdrop = ({
   sideDrawerVisible,
   bottomDrawerVisible,

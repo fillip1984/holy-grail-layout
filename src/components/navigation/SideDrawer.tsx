@@ -3,6 +3,7 @@ interface SideDrawerProps {
   setSideDrawerVisible: (state: boolean) => void;
 }
 
+// off canvas drawer that slides in from the left
 const SideDrawer = ({
   sideDrawerVisible,
   setSideDrawerVisible,
