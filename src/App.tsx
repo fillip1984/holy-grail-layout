@@ -5,6 +5,7 @@ import SomethingElse from "./components/SomethingElse/SomethingElse";
 import TopNav from "./components/navigation/TopNav";
 import SideNav from "./components/navigation/SideNav";
 import { useRef, useState } from "react";
+import Footer from "./components/navigation/Footer";
 
 const App = () => {
   const [sideDrawerVisible, setSideDrawerVisible] = useState(false);
@@ -32,7 +33,7 @@ const App = () => {
         </Router>
       </div>
 
-      <div className="h-[6vh] bg-gray-200 p-1">footer</div>
+      <Footer />
 
       <div
         className={`fixed top-0 bottom-0 left-0 z-[999] w-1/3 rounded-r-lg bg-red-300 p-2 transition duration-300 ease-in-out ${
