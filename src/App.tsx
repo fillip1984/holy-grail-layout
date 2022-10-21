@@ -1,13 +1,13 @@
-import Home from "./components/Home/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Admin from "./components/Admin/Admin";
-import SomethingElse from "./components/SomethingElse/SomethingElse";
-import TopNav from "./components/navigation/TopNav";
-import SideNav from "./components/navigation/SideNav";
-import { useRef, useState } from "react";
+import Home from "./components/Home/Home";
+import BottomDrawer from "./components/navigation/BottomDrawer";
 import Footer from "./components/navigation/Footer";
 import SideDrawer from "./components/navigation/SideDrawer";
-import BottomDrawer from "./components/navigation/BottomDrawer";
+import SideNav from "./components/navigation/SideNav";
+import TopNav from "./components/navigation/TopNav";
+import SomethingElse from "./components/SomethingElse/SomethingElse";
 
 const App = () => {
   const [sideDrawerVisible, setSideDrawerVisible] = useState(false);
@@ -30,6 +30,8 @@ const App = () => {
                 />
               }
             />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/something" element={<SomethingElse />} />
           </Routes>
         </Router>
       </div>
@@ -57,23 +59,6 @@ const App = () => {
         }}></div>
     </div>
   );
-  /*
-  return (
-    <div className="App">
-      <Router>
-        <TopNav />
-        <div className="flex">
-          <SideNav />
-          <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/something" element={<SomethingElse />} />
-          </Routes>
-        </div>
-      </Router>
-    </div>
-  );
-  */
 };
 
 export default App;
