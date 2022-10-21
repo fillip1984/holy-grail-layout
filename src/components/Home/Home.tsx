@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { BsPlusLg, BsTrash, BsDownload, BsUpload } from "react-icons/bs";
+//import { BsPlusLg, BsTrash, BsDownload, BsUpload } from "react-icons/bs";
 
 interface HomeProps {
   setSideDrawerVisible: (state: boolean) => void;
@@ -10,7 +10,7 @@ const Home = ({ setSideDrawerVisible, setBottomDrawerVisible }: HomeProps) => {
   const mainAnchorRef = useRef<HTMLSpanElement>(null);
 
   return (
-    <main className="flex-1 space-x-2 overflow-auto bg-yellow-100 p-2 pb-20">
+    <main className="flex-1 space-x-2 overflow-auto p-2 pb-20">
       {/* you'll notice the pb-20 and wonder why on earth would you want to pad that much. 
           But then I'd ask you if you've ever experienced a UI where the last element of the 
           page was too close to the bottom or was clipped and not able to scroll it into view 

@@ -1,6 +1,3 @@
-import React from "react";
-
-// Top nav should contain branding and an avatar to open a menu for profile, log in/out abilities
 const TopNav = () => {
   return (
     <header className="flex h-[8vh] items-center justify-between bg-sky-300 p-2">
