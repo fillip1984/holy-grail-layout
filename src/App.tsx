@@ -32,7 +32,15 @@ const App = () => {
               }
             />
             <Route path="/admin" element={<Admin />} />
-            <Route path="/something" element={<SomethingElse />} />
+            <Route
+              path="/something"
+              element={
+                <SomethingElse
+                  setSideDrawerVisible={setSideDrawerVisible}
+                  setBottomDrawerVisible={setBottomDrawerVisible}
+                />
+              }
+            />
           </Routes>
         </Router>
       </div>

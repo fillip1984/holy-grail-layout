@@ -1,5 +1,4 @@
 import { useRef } from "react";
-//import { BsPlusLg, BsTrash, BsDownload, BsUpload } from "react-icons/bs";
 
 interface HomeProps {
   setSideDrawerVisible: (state: boolean) => void;
@@ -18,22 +17,7 @@ const Home = ({ setSideDrawerVisible, setBottomDrawerVisible }: HomeProps) => {
           My only wish is that you could apply this someplace and have it applied to all views 
           and not have to remember to add it to each view... TODO! */}
       {/* toolbar...coming soon */}
-      {/*
-      <div className="space-x-2 bg-gray-300 p-2">
-        <button className="rounded bg-sky-200 p-2">
-          <BsPlusLg />
-        </button>
-        <button className="rounded bg-red-200 p-2">
-          <BsTrash />
-        </button>
-        <button className="rounded bg-sky-100 p-2">
-          <BsDownload />
-        </button>
-        <button className="rounded bg-sky-300 p-2">
-          <BsUpload />
-        </button>
-      </div>
-  */}
+
       <span ref={mainAnchorRef} className="block">
         Home
       </span>
