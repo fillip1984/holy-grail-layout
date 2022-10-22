@@ -8,7 +8,7 @@ interface ToastContainerProps {
 
 const ToastContainer = ({ toasts, removeToast }: ToastContainerProps) => {
   return (
-    <div className="pointer-events-none absolute top-0 right-0 bottom-0 flex w-1/2 flex-col items-center justify-end space-y-2 px-4 py-6">
+    <div className="pointer-events-none absolute top-0 right-0 bottom-0 flex w-1/2 flex-col items-center justify-end space-y-2 px-4 py-6 lg:w-1/3 xl:w-1/4">
       {toasts.map((toast) => (
         <ToastCard key={toast.id} toast={toast} removeToast={removeToast} />
       ))}
