@@ -6,6 +6,7 @@ interface ToastCardProps {
   removeToast: (toastToRemove: Toast) => void;
 }
 
+//TODO: add visual feedback for when the card will dismiss and perhaps a pause when hovered over? See https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
 const ToastCard = ({ toast, removeToast }: ToastCardProps) => {
   return (
     <div
