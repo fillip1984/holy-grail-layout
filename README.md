@@ -2,6 +2,8 @@
 
 My attempt to build out a set of useful UI/UX components with tailwind
 
+![Sample project gif](sample.gif)
+
 While working on other projects I commonly forget how to do something. I wanted to use this app to remind myself how I've accomplished the holy grail layout so I don't have to go and hunt on youtube/google.
 
 I wouldn't recommend that you use this code as is! I would seek out 3rd party libraries that accomplish the more complex bits. There are definitely bugs in these UI components. What this project does do is give you a sense of how things can be accomplished. That should help you decide whether you should find a UI library or not, and also in understanding how to troubleshoot or customize other libraries that are built to handle toast, modal, drawers, etc...
