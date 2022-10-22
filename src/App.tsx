@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div className="flex h-screen flex-col">
-      <TopNav />
+      <TopNav setSideDrawerVisible={setSideDrawerVisible} />
 
       <div className="flex flex-1 overflow-hidden">
         <Router>
