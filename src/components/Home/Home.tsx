@@ -6,12 +6,14 @@ interface HomeProps {
   setSideDrawerVisible: (state: boolean) => void;
   setBottomDrawerVisible: (state: boolean) => void;
   addToast: (toast: Toast) => void;
+  setModalVisible: (state: boolean) => void;
 }
 
 const Home = ({
   setSideDrawerVisible,
   setBottomDrawerVisible,
   addToast,
+  setModalVisible,
 }: HomeProps) => {
   const mainAnchorRef = useRef<HTMLHeadingElement>(null);
 
@@ -51,7 +53,11 @@ const Home = ({
           }>
           Toggle toast
         </button>
-        <button className="bg-slate-200 p-2">Toggle snackbar</button>
+        <button
+          className="bg-slate-200 p-2"
+          onClick={() => setModalVisible(true)}>
+          Toggle modal
+        </button>
       </div>
 
       <div className="mt-4">

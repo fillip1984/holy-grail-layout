@@ -6,12 +6,14 @@ interface SomethingElseProps {
   setSideDrawerVisible: (state: boolean) => void;
   setBottomDrawerVisible: (state: boolean) => void;
   addToast: (toast: Toast) => void;
+  setModalVisible: (state: boolean) => void;
 }
 
 const SomethingElse = ({
   setSideDrawerVisible,
   setBottomDrawerVisible,
   addToast,
+  setModalVisible,
 }: SomethingElseProps) => {
   return (
     <div className="flex flex-1 flex-col">
@@ -27,7 +29,9 @@ const SomethingElse = ({
           }>
           <BsPlusLg />
         </button>
-        <button className="rounded bg-red-200 p-2">
+        <button
+          className="rounded bg-red-200 p-2"
+          onClick={() => setModalVisible(true)}>
           <BsTrash />
         </button>
         <button
@@ -42,7 +46,7 @@ const SomethingElse = ({
         </button>
       </div>
       <div className="flex-1 overflow-auto p-2 pb-20">
-        <h4 className="pb-4">Something Else</h4>
+        <h4 className="pb-4">Some where</h4>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
         molestias est consequatur ullam, soluta dolorum officiis pariatur
         voluptas autem adipisci voluptate molestiae quae iure minus

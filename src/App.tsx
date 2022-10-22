@@ -5,11 +5,12 @@ import Home from "./components/Home/Home";
 import Backdrop from "./components/navigation/Backdrop";
 import BottomDrawer from "./components/navigation/BottomDrawer";
 import Footer from "./components/navigation/Footer";
+import Modal from "./components/navigation/Modal";
 import SideDrawer from "./components/navigation/SideDrawer";
 import SideNav from "./components/navigation/SideNav";
 import ToastContainer from "./components/navigation/ToastContainer";
 import TopNav from "./components/navigation/TopNav";
-import SomethingElse from "./components/SomethingElse/SomethingElse";
+import SomeWhere from "./components/SomeWhere/SomeWhere";
 import { Toast } from "./Types";
 
 const App = () => {
@@ -17,9 +18,10 @@ const App = () => {
   const [bottomDrawerVisible, setBottomDrawerVisible] = useState(false);
 
   const [toasts, setToasts] = useState<Toast[]>([]);
+  const timeToLive = 5000;
 
   const addToast = (toastToAdd: Toast) => {
-    setToasts((state) => [...state, toastToAdd]);
+    setToasts((state) => [...state, { ...toastToAdd }]);
 
     // switch state from visible = false to true to trigger animation
     setTimeout(() => {
@@ -30,14 +32,14 @@ const App = () => {
       );
     }, 0);
 
-    // in 10 secsswitch state from visible = true to false to trigger animation
+    // in 10 secs switch state from visible = true to false to trigger animation
     setTimeout(() => {
       setToasts((state) =>
         state.map((toast) =>
           toast.id === toastToAdd.id ? { ...toast, visible: false } : toast
         )
       );
-    }, 8000);
+    }, timeToLive);
   };
 
   const removeToast = (toastToRemove: Toast) => {
@@ -45,6 +47,8 @@ const App = () => {
       state.filter((toast) => toast.id !== toastToRemove.id)
     );
   };
+
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <div className="flex h-screen flex-col">
@@ -61,6 +65,7 @@ const App = () => {
                   setSideDrawerVisible={setSideDrawerVisible}
                   setBottomDrawerVisible={setBottomDrawerVisible}
                   addToast={addToast}
+                  setModalVisible={setModalVisible}
                 />
               }
             />
@@ -68,10 +73,11 @@ const App = () => {
             <Route
               path="/something"
               element={
-                <SomethingElse
+                <SomeWhere
                   setSideDrawerVisible={setSideDrawerVisible}
                   setBottomDrawerVisible={setBottomDrawerVisible}
                   addToast={addToast}
+                  setModalVisible={setModalVisible}
                 />
               }
             />
@@ -96,9 +102,13 @@ const App = () => {
         bottomDrawerVisible={bottomDrawerVisible}
         setSideDrawerVisible={setSideDrawerVisible}
         setBottomDrawerVisible={setBottomDrawerVisible}
+        modalVisible={modalVisible}
+        setModalVisible={setModalVisible}
       />
 
       <ToastContainer toasts={toasts} removeToast={removeToast} />
+
+      <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
     </div>
   );
 };
