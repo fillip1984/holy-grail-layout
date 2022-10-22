@@ -23,7 +23,7 @@ const App = () => {
           <SideNav />
           <Routes>
             <Route
-              path="/home"
+              path="/"
               element={
                 <Home
                   setSideDrawerVisible={setSideDrawerVisible}

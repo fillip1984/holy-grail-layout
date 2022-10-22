@@ -12,7 +12,7 @@ const SideNav = () => {
     {
       label: "Home",
       icon: <BsHouse />,
-      path: "/home",
+      path: "/",
     },
     {
       label: "Somewhere",
@@ -29,13 +29,14 @@ const SideNav = () => {
   return (
     <nav
       className={`bg-sky-300 pt-6 transition-all duration-300 ${
-        shrunk ? "w-[80px]" : "md:w-1/3 lg:w-1/4 xl:w-1/5"
+        shrunk ? "w-[72px]" : "md:w-1/3 lg:w-1/4 xl:w-1/6"
       }`}>
       <div className="flex flex-col space-y-4 px-2 text-2xl text-white">
         {/* Handles active class of react-router-dom NavLink,
             https://ultimatecourses.com/blog/active-navlink-classes-with-react-router */}
         {navItems.map((navItem) => (
           <NavLink
+            end
             to={navItem.path}
             key={navItem.label}
             className={({ isActive }) =>
@@ -43,7 +44,7 @@ const SideNav = () => {
                 isActive ? "bg-sky-400" : ""
               } flex space-x-2 rounded p-2 transition duration-300`
             }>
-            <span className="pr-2 text-4xl">{navItem.icon}</span>
+            <span className="pr-3 text-4xl">{navItem.icon}</span>
             <span>{navItem.label}</span>
           </NavLink>
         ))}
