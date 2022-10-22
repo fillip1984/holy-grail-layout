@@ -1,6 +1,8 @@
-# Holygrail -layout
+# Holy grail -layout
 
 My attempt to build out as much UI/UX with tailwind
+
+![Sample of project](./documentation/sample.gif)
 
 While working on other projects I commonly forget how to do something. I wanted to use this app to remind myself how I've accomplished the holy grail layout so I don't have to go and hunt on youtube/google
 
@@ -23,7 +25,7 @@ While working on other projects I commonly forget how to do something. I wanted 
 
 There's nothing really special about this project -- no middleware, database, etc...
 
-1) Just pull down the project
+1) Just pull down the project (e.g. git clone <https://github.com/fillip1984/holy-grail-layout.git>)
 2) run npm install to pull down dependencies
 3) then run npm run dev
 
