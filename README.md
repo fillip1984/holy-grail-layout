@@ -2,7 +2,7 @@
 
 My attempt to build out a set of useful UI/UX components with tailwind
 
-![Sample of project](./documentation/sample.gif)
+![Sample of project](sample.gif)
 
 While working on other projects I commonly forget how to do something. I wanted to use this app to remind myself how I've accomplished the holy grail layout so I don't have to go and hunt on youtube/google.
 
