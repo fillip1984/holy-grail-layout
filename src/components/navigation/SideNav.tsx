@@ -29,7 +29,7 @@ const SideNav = () => {
   return (
     <nav
       className={`bg-sky-300 pt-6 transition-all duration-300 ${
-        shrunk ? "w-[72px]" : "md:w-1/3 lg:w-1/4 xl:w-1/6"
+        shrunk ? "w-[72px]" : "w-full md:w-1/3 lg:w-1/4 xl:w-1/6"
       }`}>
       <div className="flex flex-col space-y-4 px-2 text-2xl text-white">
         {/* Handles active class of react-router-dom NavLink,
