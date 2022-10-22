@@ -19,7 +19,9 @@ const Modal = ({ modalVisible, setModalVisible }: ModalProps) => {
       }`}>
       <div
         id="modal-content"
-        className="pointer-events-auto flex h-1/3 w-3/4 flex-col rounded-lg bg-white p-4 shadow-lg">
+        className={`${
+          modalVisible ? "pointer-events-auto" : "pointer-events-none"
+        } flex h-1/3 w-3/4 flex-col rounded-lg bg-white p-4 shadow-lg`}>
         <div
           id="modal-header"
           className="flex items-center justify-between text-2xl">
