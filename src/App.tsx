@@ -40,6 +40,9 @@ const App = () => {
         )
       );
     }, timeToLive);
+
+    // cleans up toasts once they are not visible
+    setTimeout(() => removeToast(toastToAdd), timeToLive * 2);
   };
 
   const removeToast = (toastToRemove: Toast) => {
