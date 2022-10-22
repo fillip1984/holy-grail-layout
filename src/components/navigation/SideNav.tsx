@@ -2,6 +2,9 @@ import { useState } from "react";
 import { BsArrowLeft, BsGear, BsHouse, BsJoystick } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
+// side navigation with locations to get around the site, should be responsive enough
+// On smaller and mobile devices a better approach to to switch to a bottom nav or to have the nav shrunk with responsive (smaller) icons and when expanded
+// it is absolute positioning and covers everything until a location is selected then it shrinks back. There are examples of both online if you look
 const SideNav = () => {
   const [shrunk, setShrunk] = useState(false);
 
