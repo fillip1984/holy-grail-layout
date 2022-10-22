@@ -1,26 +1,35 @@
-# VITE + React + Typescript + Eslint + Prettier + Tailwind + React-Query
+# Holygrail -layout
 
-A starter for React with Typescript and many more useful libraries that I commonly use. I plan to use this repository to build out future side projects. You pull down a fresh copy using [degit](https://github.com/Rich-Harris/degit)
+My attempt to build out as much UI/UX with tailwind
 
-This repository was inspired by a repository I found on github [TheSwordBreaker/vite-reactts-eslint-prettier](https://raw.githubusercontent.com/TheSwordBreaker/vite-reactts-eslint-prettier/main/README.md)
+While working on other projects I commonly forget how to do something. I wanted to use this app to remind myself how I've accomplished the holy grail layout so I don't have to go and hunt on youtube/google
+
+## Goals
+
+- [ X ] [Holy grail layout](<https://en.wikipedia.org/wiki/Holy_grail_(web_design>)
+  - [ X ] Main section scrolls independent of header, side nav, and footer effectively making them all static or fixed
+  - [ X ] Side nav is... somewhat responsive. Wasn't striving for mobile first
+- [ X ] Side drawer
+- [ X ] Bottom drawer
+- [ X ] toasts
+  - [ ] add progress bar or ring to indicate how long a toast will remain before being dismissed
+- [ X ] modal
 
 ## Prerequisites
 
-1) Install degit - 'npm install -g degit'
-2) [git](https://git-scm.com/) must be installed
+- You have node.js, npm, and vs code installed
 
 ## Creating a clone from this repository
 
-1) Clone the repo using degit by using the following command, make sure to replace &lt;project name&gt; with the name of the application - 'npx degit fillip1984/vite-react-ts-eslint-prettier-tailwind-react-query &lt;project name&gt;'
-2) Open the directory - cd &lt;project name&gt;
-3) Install packages - 'npm install'
-4) Either:
-    * Start application from terminal - 'npm run dev'
-    * Open VS Code - 'code .'
+There's nothing really special about this project -- no middleware, database, etc...
 
-## Now that you've used degit once
+1) Just pull down the project
+2) run npm install to pull down dependencies
+3) then run npm run dev
 
-1) Start the process with 'degit'
-2) Select the template that you've previously used
-3) Enter the destination
-4) Decide if you want to use the cached version or not
+## Project was bootstrapped via degit
+
+I have created a project that I use to bootstrap other projects. You can find out more from the below links to learn how to do the same if you wish.
+
+- [UI Tooling](<https://github.com/fillip1984/ui-tooling-2>)
+- The above repository was inspired by [TheSwordBreaker/vite-reactts-eslint-prettier](https://raw.githubusercontent.com/TheSwordBreaker/vite-reactts-eslint-prettier/main/README.md)
