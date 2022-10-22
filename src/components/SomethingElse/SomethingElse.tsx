@@ -1,18 +1,30 @@
+import { nanoid } from "nanoid";
+import { BsDownload, BsPlusLg, BsTrash, BsUpload } from "react-icons/bs";
+import { Toast } from "../../Types";
+
 interface SomethingElseProps {
   setSideDrawerVisible: (state: boolean) => void;
   setBottomDrawerVisible: (state: boolean) => void;
+  addToast: (toast: Toast) => void;
 }
-
-import { BsDownload, BsPlusLg, BsTrash, BsUpload } from "react-icons/bs";
 
 const SomethingElse = ({
   setSideDrawerVisible,
   setBottomDrawerVisible,
+  addToast,
 }: SomethingElseProps) => {
   return (
     <div className="flex flex-1 flex-col">
       <div className="toolbar w-full space-x-2 bg-gray-300 p-2">
-        <button className="rounded bg-sky-200 p-2">
+        <button
+          className="rounded bg-sky-200 p-2"
+          onClick={() =>
+            addToast({
+              id: nanoid(),
+              message: "it worked!",
+              visible: false,
+            })
+          }>
           <BsPlusLg />
         </button>
         <button className="rounded bg-red-200 p-2">

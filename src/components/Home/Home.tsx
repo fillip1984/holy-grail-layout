@@ -1,12 +1,19 @@
+import { nanoid } from "nanoid";
 import { useRef } from "react";
+import { Toast } from "../../Types";
 
 interface HomeProps {
   setSideDrawerVisible: (state: boolean) => void;
   setBottomDrawerVisible: (state: boolean) => void;
+  addToast: (toast: Toast) => void;
 }
 
-const Home = ({ setSideDrawerVisible, setBottomDrawerVisible }: HomeProps) => {
-  const mainAnchorRef = useRef<HTMLSpanElement>(null);
+const Home = ({
+  setSideDrawerVisible,
+  setBottomDrawerVisible,
+  addToast,
+}: HomeProps) => {
+  const mainAnchorRef = useRef<HTMLHeadingElement>(null);
 
   return (
     <main className="flex-1 space-x-2 overflow-auto p-2 pb-20">
@@ -18,20 +25,36 @@ const Home = ({ setSideDrawerVisible, setBottomDrawerVisible }: HomeProps) => {
           and not have to remember to add it to each view... TODO! */}
       {/* toolbar...coming soon */}
 
-      <span ref={mainAnchorRef} className="block">
+      <h4 ref={mainAnchorRef} className="block pb-4">
         Home
-      </span>
-      <button
-        className="bg-slate-200 p-2"
-        onClick={() => setSideDrawerVisible(true)}>
-        Toggle side drawer
-      </button>
-      <button
-        className="bg-slate-200 p-2"
-        onClick={() => setBottomDrawerVisible(true)}>
-        Toggle bottom drawer
-      </button>
-      <div>
+      </h4>
+
+      <div className="flex flex-wrap gap-2">
+        <button
+          className="bg-slate-200 p-2"
+          onClick={() => setSideDrawerVisible(true)}>
+          Toggle side drawer
+        </button>
+        <button
+          className="bg-slate-200 p-2"
+          onClick={() => setBottomDrawerVisible(true)}>
+          Toggle bottom drawer
+        </button>
+        <button
+          className="bg-slate-200 p-2"
+          onClick={() =>
+            addToast({
+              id: nanoid(),
+              message: "it worked!",
+              visible: false,
+            })
+          }>
+          Toggle toast
+        </button>
+        <button className="bg-slate-200 p-2">Toggle snackbar</button>
+      </div>
+
+      <div className="mt-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
         mollitia maiores repellendus cum autem assumenda facilis delectus,
         laborum aperiam distinctio ducimus ipsum aspernatur quaerat fugiat non
